@@ -103,14 +103,29 @@ body{
     background-color: rgb(39, 38, 38);
     color: aliceblue;
     margin-bottom: 0px;
-    
+    display: flex;
     border: 0px;
+}
+
+.tarjeta-imagen{
+    background-image:url("../img/honolulu.jpg") ;
+    background-size: cover;
+    width: 50%;
+    height: 340px;
+    float: left;
+}
+
+.tarjeta-body{
+    width: 50%;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 5px;
 }
 
 .formulario{
     background-color: white;
     text-align: center;
-    margin-top: -16px;
+    /* margin-top: -16px; */
     padding-top: 10px;
     padding-bottom: 25px;
     color: black;
@@ -160,3 +175,4 @@ footer a:hover{
     color: aquamarine;
     cursor: pointer;
 }
+
