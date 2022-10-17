@@ -138,6 +138,11 @@ body{
     margin: auto;
 }
 
+.formulario-content-ticket{
+    width: 55%;
+    margin: auto;
+}
+
 .formulario input{
 
     font-size: smaller;
