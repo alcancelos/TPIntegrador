@@ -7,21 +7,38 @@ function calcular(){
     let descuento;
     let result = document.getElementById("resultado");
 
+    //Supongo que no se pueden comprar mas de 1000 tickets por persona...
     if(!regex.test(cantidad) || cantidad=='' || parseInt(cantidad)>1000)
     {
         result.innerHTML="Total a pagar: Ingrese una cantidad válida" ;
     }
     else
     {
-        if(document.getElementById('descuento').value=='estudiante'){
-            descuento=0.2;
+        switch (document.getElementById('descuento').value) {
+            case 'estudiante':
+                descuento=0.2;
+                break;
+            case 'trainee':
+                descuento=0.5;
+                break;
+            case 'junior':
+                descuento=0.85;
+                break;
+            default:
+                break;
         }
-        else if(document.getElementById('descuento').value=='trainee'){
-            descuento=0.5;
-        }
-        else if(document.getElementById('descuento').value=='junior'){
-            descuento=0.85;
-        }           
+        // Otra opcion hacerla on if - else
+
+        // if(document.getElementById('descuento').value=='estudiante'){
+        //     descuento=0.2;
+        // }
+        // else if(document.getElementById('descuento').value=='trainee'){
+        //     descuento=0.5;
+        // }
+        // else if(document.getElementById('descuento').value=='junior'){
+        //     descuento=0.85;
+        // }  
+
         result.innerHTML="Total a pagar: $ "+200*parseInt(cantidad)*descuento;
     }  
 }
